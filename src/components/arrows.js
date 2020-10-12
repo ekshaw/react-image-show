@@ -4,18 +4,13 @@ const Arrow = props => {
   const { direction } = props;
   const backArrow = '8.165,25 25,0 0,25 25,50 8.165,25';
   const nextArrow = '16.835,25 0,50 25,25 0,0 16.835,25';
-  
+
   const points = direction === 'left'
     ? backArrow
     : nextArrow;
 
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="25" height="50" viewBox="0 0 25 50"
-    >
-      <polyline fill="#8B8B8B" points={points} />
-    </svg>
+    <svg src={require('../images/left_arrow.svg')}></svg>
   )
 };
 
